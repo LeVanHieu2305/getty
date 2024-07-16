@@ -1,0 +1,34 @@
+.landing {
+  width: 100%;
+  
+  &-sketches {
+    
+  }
+
+  &-pin {
+    height: 100%;
+    height: 100vh;
+    height: 100svh;
+    left: 0;
+    padding: var(--sideMargin);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #FFA441;
+    color: black;
+  }
+}
+
+.intro-title {
+  &-word {
+    .item {
+      width: 168px;
+      height: 677.9px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      transform: translateY(calc(0% + 0px)) scaleY(0.88692);
+      transform-origin: 0px 0px;
+    }
+  }
+}

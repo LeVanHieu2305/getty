@@ -1,0 +1,112 @@
+.chapter-two {
+    background-color: #4596ff;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 102vh;
+    // position: relative;
+
+    .chapter-two-tt {
+        position: absolute;
+        font-size: max(18px, 1.8rem);
+        left: 50%;
+        top: 2rem;
+        transform: translate(-50%);
+    }
+
+    .two-chapter-image {
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translateX(-50%);
+    }
+
+    .svgBase {
+        width: 100%;
+    }
+    .two-text-splitter--splitted-a {
+        transform: translate(2rem, -10rem) scaleY(0);
+    }
+    .two-text-splitter--splitted-b {
+        transform: translate(0rem, 12rem) scaleY(0);
+        transform-origin: right bottom;
+    }
+    .two-item {
+        position: absolute;
+        &:nth-child(1) {
+            width: 546px;
+            height: 323px;
+            left: 0px;
+            top: 350px;
+        }
+        &:nth-child(2) {
+            width: 229px;
+            height: 323px;
+            left: 534px;
+            top: 350px;
+        }
+        &:nth-child(3) {
+            width: 166px;
+            height: 323px;
+            left: 767px;
+            top: 350px;
+        }
+        &:nth-child(4) {
+            width: 395px;
+            height: 323px;
+            left: 939px;
+            top: 350px;
+        }
+        &:nth-child(5) {
+            width: 533px;
+            height: 323px;
+            left: 1338px;
+            top: 350px;
+        }
+        &:nth-child(6) {
+            width: 146px;
+            height: 70px;
+            left: 3px;
+            top: 710px;
+        }
+        &:nth-child(7) {
+            width: 318px;
+            height: 69px;
+            left: 153px;
+            top: 710px;
+        }
+        &:nth-child(8) {
+            width: 132px;
+            height: 69px;
+            left: 534px;
+            top: 710px;
+        }
+        &:nth-child(9) {
+            width: 264px;
+            height: 68px;
+            left: 669px;
+            top: 710px;
+        }
+        &:nth-child(10) {
+            width: 371px;
+            height: 69px;
+            left: 938px;
+            top: 710px;
+        }
+        &:nth-child(11) {
+            width: 371px;
+            height: 69px;
+            left: 1315px;
+            top: 710px;
+        }
+        &:nth-child(12) {
+            width: 180px;
+            height: 69px;
+            left: 1691px;
+            top: 710px;
+        }
+    }
+}

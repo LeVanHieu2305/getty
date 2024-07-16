@@ -1,0 +1,128 @@
+.chapter-three {
+    background-color: #ffa441;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 102vh;
+    // position: relative;
+
+    .chapter-three-tt {
+        position: absolute;
+        font-size: max(18px, 1.8rem);
+        left: 50%;
+        top: 2rem;
+        transform: translate(-50%);
+    }
+
+    .three-chapter-image {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translateX(-50%);
+    }
+    .chapterTitleSvg {
+        margin: auto;
+        width: 60%;
+        position: relative;
+    }
+    .svgBase {
+        width: 100%;
+    }
+    .three-text-splitter--splitted-a {
+        transform: translate(2rem, -10rem) scaleY(0);
+    }
+    .three-text-splitter--splitted-b {
+        transform: translate(0rem, 12rem) scaleY(0);
+        transform-origin: right bottom;
+    }
+    .three-item {
+        position: absolute;
+        &:nth-child(1) {
+            width: 179px;
+            height: 554px;
+            left: 1px;
+            top: 268px;
+        }
+        &:nth-child(2) {
+            width: 152px;
+            height: 347px;
+            left: 192px;
+            top: 397px;
+        }
+        &:nth-child(3) {
+            width: 147px;
+            height: 264px;
+            left: 354px;
+            top: 481px;
+        }
+        &:nth-child(4) {
+            width: 102px;
+            height: 211px;
+            left: 509px;
+            top: 530px;
+        }
+        &:nth-child(5) {
+            width: 146px;
+            height: 264px;
+            left: 614px;
+            top: 481px;
+        }
+        &:nth-child(6) {
+            width: 144px;
+            height: 347px;
+            left: 770px;
+            top: 397px;
+        }
+        &:nth-child(7) {
+            width: 270px;
+            height: 554px;
+            left: 872px;
+            top: 268px;
+        }
+        &:nth-child(8) {
+            width: 61px;
+            height: 63px;
+            left: 188px;
+            top: 760px;
+        }
+        &:nth-child(9) {
+            width: 131px;
+            height: 61px;
+            left: 250px;
+            top: 761px;
+        }
+        &:nth-child(10) {
+            width: 91px;
+            height: 61px;
+            left: 408px;
+            top: 761px;
+        }
+        &:nth-child(11) {
+            width: 61px;
+            height: 63px;
+            left: 501px;
+            top: 759px;
+        }
+        &:nth-child(12) {
+            width: 79px;
+            height: 61px;
+            left: 564px;
+            top: 761px;
+        }
+        &:nth-child(13) {
+            width: 196px;
+            height: 61px;
+            left: 647px;
+            top: 761px;
+        }
+        &:nth-child(14) {
+            width: 70px;
+            height: 61px;
+            left: 846px;
+            top: 761px;
+        }
+    }
+}

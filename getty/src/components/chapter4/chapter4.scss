@@ -1,0 +1,20 @@
+.chapter-four {
+    background-color: #ff6359;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    width: 100vw;
+    height: auto;
+    // position: relative;
+    .titleStretch__content{
+        padding: 6rem 0;
+        height: 100vh;
+    }
+    .titleStretch__content-svgggg {
+        position: sticky;
+        top: 4rem;
+        transform: scaleY(2.5);
+        transform-origin: top;
+        width: 100%;
+    }
+}

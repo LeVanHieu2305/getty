@@ -1,0 +1,171 @@
+.footer {
+    background-color: #ffa441;
+    overflow: hidden;
+    position: relative;
+    padding-top: 4.5rem;
+}
+.footer__headerWrap{
+    mix-blend-mode: multiply;
+}
+.footer__scribble{
+    width: 100%;
+    height: 100%;
+}
+.footer__header {
+    margin: auto auto 10rem;
+    text-align: center;
+    width: 90rem;
+    position: relative;
+    z-index: 1;
+}
+
+.captionBigText {
+    font-size: max(1.4rem, 14px);
+}
+.footer__title {
+    margin-bottom: 4rem;
+}
+.heading1Text {
+    font-size: 3.8rem;
+    letter-spacing: -0.11rem;
+    line-height: 110%;
+}
+// credits
+.large.credits__block {
+    margin-bottom: 6rem;
+}
+.credits__block {
+    padding: 0 8rem;
+}
+
+.credits__list {
+    align-content: start;
+    display: grid;
+    justify-content: space-around;
+    width: clamp(30rem, 100%, 100rem);
+    text-align: center;
+    margin: auto;
+}
+.fullWidth {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    margin: auto;
+}
+.large .credits__itemTitle {
+    -webkit-font-smoothing: antialiased;
+    font-family:
+        Roboto Mono,
+        Roboto,
+        Helvetica Neue,
+        sans-serif;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
+    font-size: max(1rem, 12px);
+    width: 24rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.large .credits__itemBody {
+    font-feature-settings:
+        "ss02" on,
+        "ss03" on,
+        "ss04" on,
+        "ss05" on,
+        "ss06" on;
+    font-family:
+        Reckless,
+        Roboto,
+        Helvetica Neue,
+        sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.04rem;
+    font-size: max(2rem, 24px);
+}
+
+// specialThanks
+
+.specialThanks {
+    margin-top: 14rem;
+}
+.specialThanks__title {
+    font-feature-settings:
+        "ss02" on,
+        "ss03" on,
+        "ss04" on,
+        "ss05" on,
+        "ss06" on;
+    font-family:
+        Reckless,
+        Roboto,
+        Helvetica Neue,
+        sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 2.4rem;
+    text-align: center;
+    letter-spacing: -0.04rem;
+    font-size: max(2rem, 24px);
+    margin-bottom: 2.4rem;
+}
+.small.credits__block {
+    margin-bottom: 6rem;
+    padding: 0rem 8rem;
+    text-align: center;
+}
+
+.small .credits__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    margin: auto;
+    margin-bottom: 0;
+}
+.small .credits__itemTitle{
+    font-family: Roboto Mono, Roboto, Helvetica Neue, sans-serif;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: max(1rem,12px);
+    width: auto;
+}
+.small .credits__itemBody{
+    font-family: Roboto Mono, Roboto, Helvetica Neue, sans-serif;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: uppercase;
+    font-size: max(1rem,12px);
+}
+
+// footer__bottom
+
+.footer__bottom {
+    margin-top: 12rem;
+    overflow: hidden;
+    padding-top: 8px;
+}
+.footer__logo {
+    width: 100vw;
+    transform: scale(1.07);
+}
+.footer__bottomBlock {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    padding-bottom: 3rem;
+    padding-top: 2.2rem;
+    display: none;
+}
+.btnBrackets {
+    align-items: center;
+    contain: content;
+    display: flex;
+    opacity: 0;
+    white-space: nowrap;
+}

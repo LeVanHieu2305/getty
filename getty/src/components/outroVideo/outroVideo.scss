@@ -1,0 +1,17 @@
+.outroVideo {
+    position: relative;
+    overflow: hidden;
+    .video {
+        position: fixed; // Fix the video position
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Ensure the video covers the entire container
+    }
+}
+.outroVideo-wrap {
+    position: relative;
+    height: 1800vh;
+    overflow: hidden;
+}

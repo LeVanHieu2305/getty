@@ -1,0 +1,216 @@
+.chapterEditorialTwo {
+    // position: relative;
+    position: sticky;
+    // top: 0;
+    background: #000;
+    z-index: 4; // Ensure it stayzs on top
+    .bg-white {
+        background: #fff;
+    }
+    .bg-4596ff {
+        background: #4596ff;
+    }
+    .padding-x {
+        padding: 0rem 2rem;
+    }
+    .padding-2 {
+        padding: 2rem;
+    }
+    .chapterEditorialTwo-readMore {
+        position: relative;
+        margin-left: auto;
+        // background: #4596ff;
+        width: 100%;
+        transform: scaleX(0.87);
+        pointer-events: auto;
+        transform-origin: top right;
+        // padding: 0rem 2rem;
+    }
+
+    .editorialHero {
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    }
+    .titleStretch__content {
+        height: 200vh; // Extend the height to allow scrolling
+    }
+
+    .titleStretch__content-svgg {
+        position: sticky;
+        top: 4rem;
+        transform: scaleY(2.5);
+        transform-origin: top;
+        width: 100%;
+    }
+
+    .editorialHero__description {
+        font-family:
+            Reckless,
+            Roboto,
+            Helvetica Neue,
+            sans-serif;
+        font-size: 3.8rem;
+        letter-spacing: -0.11rem;
+        line-height: 110%;
+        margin-left: auto;
+        margin-top: auto;
+        position: relative;
+        transform-origin: right;
+        padding-top: 0rem;
+        text-indent: 14rem;
+        width: 89rem;
+        color: #000;
+    }
+    .chapterSection .parallax__inner-a,
+    .chapterSection .parallax__inner-b,
+    .chapterSection .parallax__inner-c,
+    .chapterSection .parallax__inner-f,
+    .chapterSection .parallax__inner-e {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .chapterEditorialTwo-bg .parallax__inner-d {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .editorialDropCap {
+        display: flex;
+        gap: 10rem;
+        justify-content: space-between;
+        padding: 2rem;
+        padding-bottom: 8rem;
+    }
+    .editorialDropCap__text {
+        max-width: max(40rem, 400px);
+    }
+    .editorialDropCap__first {
+        width: 14rem;
+    }
+    .editorialDropCap__body {
+        padding-right: 0;
+        padding-top: 2rem;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+    .editorialDropCap__media {
+    }
+    .imageText {
+        grid-gap: 3rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        padding-bottom: 28rem;
+    }
+
+    .imageText__left {
+        display: flex;
+        flex-direction: column;
+        grid-column: span 2;
+        height: 100%;
+        margin-top: 0;
+        align-items: flex-end;
+        margin-right: 0;
+        order: 1;
+        justify-content: space-between;
+        width: 75%;
+        margin-left: auto;
+        .editorialMedia {
+            width: 100%;
+        }
+    }
+    .isSingleImage {
+        .imageText__left {
+            width: 100%;
+            margin-left: auto;
+        }
+    }
+    .imageText__text {
+        width: 100%;
+    }
+    .bodyText {
+        font-size: 1.4rem;
+        color: #000;
+    }
+
+    .imageText__right {
+        display: flex;
+        grid-column: span 4;
+        margin-left: 0;
+        margin-right: 10rem;
+        flex-direction: column;
+        max-width: 45vw;
+        .editorialMedia {
+            width: 100%;
+        }
+    }
+    .chapterSection.comp {
+        position: relative;
+        z-index: 1;
+    }
+    .readMore__end {
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background: #fff;
+            width: 100vw;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -51%);
+            z-index: -1;
+        }
+        .textFlip.readMore__btn {
+            display: flex;
+        }
+        .readMore__btn {
+            background: transparent;
+            border: unset;
+            margin: 0 auto;
+            display: block;
+        }
+        .textFlip.readMore__btn {
+            margin: 0 auto;
+            display: flex;
+            background-color: #000;
+            border-radius: 4rem;
+            color: #fff;
+            padding: 1rem 1.5rem;
+        }
+    }
+    .chapterEditorialTwo-bg {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding-top: 24px;
+        margin-top: -1px;
+        background: #fff;
+        .parallax__inner-b {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .chapterSection-wrap {
+        position: relative;
+        .bodyText {
+            font-size: 2.4rem;
+        }
+    }
+}
