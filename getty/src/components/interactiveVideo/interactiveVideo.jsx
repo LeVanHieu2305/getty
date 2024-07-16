@@ -26,46 +26,60 @@ function InteractiveVideo() {
     const subtitleText = "So, what I focused on when I designed the Disney Hall is the relationship of the audience to the performer and then the performer to the audience and the audience to the audience.";
     const words = subtitleText.split(" ");
 
-    useEffect(() => {
-        ScrollTrigger.create({
-            trigger: videoRef.current,
-            start: "top center",
-            end: "bottom center",
-            onEnter: () => !isPaused && videoRef.current.play(),
-            onLeave: () => videoRef.current.pause(),
-            onEnterBack: () => !isPaused && videoRef.current.play(),
-            onLeaveBack: () => videoRef.current.pause(),
-        });
+ useEffect(() => {
+        // Sao lưu videoRef.current vào biến
+        const videoElement = videoRef.current;
 
+        // Khởi tạo ScrollTrigger
+        if (videoElement) {
+            ScrollTrigger.create({
+                trigger: videoElement,
+                start: "top center",
+                end: "bottom center",
+                onEnter: () => !isPaused && videoElement.play(),
+                onLeave: () => videoElement.pause(),
+                onEnterBack: () => !isPaused && videoElement.play(),
+                onLeaveBack: () => videoElement.pause(),
+            });
+        }
+
+        // Hàm cập nhật thời gian
         const handleTimeUpdate = () => {
-            const video = videoRef.current;
-            const { start, end } = currentSegment;
-            const currentProgress = ((video.currentTime - start) / (end - start)) * 100;
-            setProgress(currentProgress);
+            if (videoElement) {
+                const { start, end } = currentSegment;
+                const currentProgress = ((videoElement.currentTime - start) / (end - start)) * 100;
+                setProgress(currentProgress);
 
-            const currentTime = video.currentTime;
-            const wordsPerSecond = words.length / (end - start);
-            const currentWordIndex = Math.floor((currentTime - start) * wordsPerSecond);
-            setActiveIndex(currentWordIndex);
+                const currentTime = videoElement.currentTime;
+                const wordsPerSecond = words.length / (end - start);
+                const currentWordIndex = Math.floor((currentTime - start) * wordsPerSecond);
+                setActiveIndex(currentWordIndex);
 
-            if (video.currentTime >= end) {
-                video.pause();
-                video.currentTime = end; // Ensure it doesn't loop back
-                playNextSegment(); // Play the next segment automatically
+                if (videoElement.currentTime >= end) {
+                    videoElement.pause();
+                    videoElement.currentTime = end; // Ensure it doesn't loop back
+                    playNextSegment(); // Play the next segment automatically
+                }
             }
         };
 
+        // Hàm xử lý play
         const handlePlay = () => setShowSubtitles(true);
         // const handlePause = () => setShowSubtitles(false);
 
-        videoRef.current.addEventListener("timeupdate", handleTimeUpdate);
-        videoRef.current.addEventListener("play", handlePlay);
-        // videoRef.current.addEventListener("pause", handlePause);
+        if (videoElement) {
+            videoElement.addEventListener("timeupdate", handleTimeUpdate);
+            videoElement.addEventListener("play", handlePlay);
+            // videoElement.addEventListener("pause", handlePause);
+        }
 
+        // Cleanup
         return () => {
-            videoRef.current.removeEventListener("timeupdate", handleTimeUpdate);
-            videoRef.current.removeEventListener("play", handlePlay);
-            // videoRef.current.removeEventListener("pause", handlePause);
+            if (videoElement) {
+                videoElement.removeEventListener("timeupdate", handleTimeUpdate);
+                videoElement.removeEventListener("play", handlePlay);
+                // videoElement.removeEventListener("pause", handlePause);
+            }
         };
     }, [isPaused, currentSegment]);
 
