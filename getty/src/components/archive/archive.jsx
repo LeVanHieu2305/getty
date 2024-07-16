@@ -165,7 +165,7 @@ function Archive() {
           <article class="archiveGridItem descriptor">
             <h2 class="captionSmallText">CHAPTER I Ship in the Box</h2>
             <p class="archiveGridItem__body bodyText">
-              At the building's literal and conceptual center is the concert
+              At the building s literal and conceptual center is the concert
               hall itself, an interior space whose development in many ways
               directed the overall scheme for the building.
             </p>

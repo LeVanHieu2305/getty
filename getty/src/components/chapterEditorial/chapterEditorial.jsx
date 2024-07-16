@@ -190,7 +190,7 @@ function ChapterEditorial() {
                 </div>
               </div>
               <p className="editorialHero__description heading1Text">
-                Gehry's design approach aimed at once to subvert public
+                Gehry s design approach aimed at once to subvert public
                 perception of his unconventional design methods and to give rise
                 to a concert hall that was appropriately and uniquely “LA.”
               </p>
@@ -232,7 +232,7 @@ function ChapterEditorial() {
                   />
                 </div>
                 <h3 className="editorialMedia__caption captionSmallText">
-                  Perspective Rendering for Frank Gehry's entry to the Walt
+                  Perspective Rendering for Frank Gehry s entry to the Walt
                   Disney Concert Hall Competition
                 </h3>
               </div>
@@ -272,7 +272,7 @@ function ChapterEditorial() {
                   </div>
                 </div>
                 <h3 className="isAbsolute editorialMedia__caption captionSmallText">
-                  Model for Frank Gehry's entry to the Walt Disney Concert Hall
+                  Model for Frank Gehry s entry to the Walt Disney Concert Hall
                   Competition
                 </h3>
               </div>

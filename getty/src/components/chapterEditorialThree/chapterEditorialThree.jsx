@@ -247,7 +247,7 @@ function ChapterEditorialThree() {
                   <div className="editorialMedia isPortrait imageText__mediaRight">
                     <div className="parallax">
                       <div className="parallax__inner-e">
-                        <Image src={wdchInteriorapril12} />
+                        <Image src={wdchInteriorapril12} alt=""/>
                       </div>
                     </div>
                     <h3
@@ -265,20 +265,20 @@ function ChapterEditorialThree() {
                     </h2>
                     <p className="imageText__body bodyText">
                       Why an organ of this magnitude, with its 6,134 pipes
-                      towering above the concert hall's stage? Frank Gehry
+                      towering above the concert hall s stage? Frank Gehry
                       explains this process as a crescendo of ideas. When, at an
-                      early stage, he visited Hans Scharoun's Berlin
-                      Philharmonie, Gehry found himself in awe of Scharoun's
+                      early stage, he visited Hans Scharoun s Berlin
+                      Philharmonie, Gehry found himself in awe of Scharoun s
                       organ for the immediate power and dynamic presence it
-                      afforded the hall. The organ's rich materiality and
+                      afforded the hall. The organ s rich materiality and
                       Baroque sculptural quality, accentuated by the play of
                       light within its immediate surrounds, strongly appealed to
-                      Gehry's vision for the Walt Disney Concert Hall. However,
-                      he and the project team sensed that the organ's off-axis
+                      Gehry s vision for the Walt Disney Concert Hall. However,
+                      he and the project team sensed that the organs off-axis
                       placement in the Berlin Philharmonie was acoustically less
                       than ideal, and Gehry sought to devise alternate design
                       solutions in his own scheme for the Walt Disney Concert
-                      Hall. The setting of the organ on the hall's axis of
+                      Hall. The setting of the organ on the halls axis of
                       symmetry thus became essential, as was the creation of an
                       illumination device through which rays of light could
                       bathe the instrument in warm tones from high above. With
@@ -286,7 +286,7 @@ function ChapterEditorialThree() {
                       in fact functional—the organ embraces the orchestra and
                       audience alike, alluding to the playful dynamism and
                       spirit of invention that Gehry first noticed and admired
-                      in Scharoun's organ. THE ORGAN IN THE HALL PHOTO BY ADAM
+                      in Scharouns organ. THE ORGAN IN THE HALL PHOTO BY ADAM
                       LATHAM COURTESY OF LA PHIL
                     </p>
                   </div>
@@ -295,7 +295,7 @@ function ChapterEditorialThree() {
                   <div className="editorialMedia isPortrait imageText__mediaLeft">
                     <div className="parallax">
                       <div className="parallax__inner-f">
-                        <Image src={wdch_int_auditorium} />
+                        <Image src={wdch_int_auditorium} alt=""/>
                       </div>
                     </div>
                     <h3

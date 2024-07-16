@@ -204,7 +204,7 @@ function ChapterEditorialTwo() {
                   className="editorialMedia__asset"
                 />
                 <p className="editorialDropCap__body bodyText">
-                  t the project's inception, the building’s exterior form was to
+                  t the projects inception, the building’s exterior form was to
                   be worked out through an iterative process of constructing
                   models by hand. With the concert hall shoebox at the center,
                   the building’s various programmatic requirements were fleshed
@@ -239,7 +239,7 @@ function ChapterEditorialTwo() {
                       understand how these various programmatic and scalar needs
                       could be enwrapped in a single architectural gesture.
                       Initially envisioned as a dynamic form clad in limestone,
-                      the building's exterior was later changed to stainless
+                      the buildings exterior was later changed to stainless
                       steel—largely owing to aesthetic and budgetary
                       considerations.
                     </p>
@@ -253,7 +253,7 @@ function ChapterEditorialTwo() {
                   <div className="editorialMedia isPortrait imageText__mediaRight">
                     <div className="parallax">
                       <div className="parallax__inner-e">
-                        <Image src={grimbf1} />
+                        <Image src={grimbf1} alt=""/>
                       </div>
                     </div>
                     <h3
@@ -280,7 +280,7 @@ function ChapterEditorialTwo() {
                   <div className="editorialMedia isPortrait imageText__mediaLeft">
                     <div className="parallax">
                       <div className="parallax__inner-f">
-                        <Image src={grimbf} />
+                        <Image src={grimbf} alt=""/>
                       </div>
                     </div>
                     <h3
