@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './introVideo.scss';
@@ -6,10 +6,11 @@ import './introVideo.scss';
 gsap.registerPlugin(ScrollTrigger);
 
 function IntroVideo() {
+    const videoRef = useRef(null);
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
     useEffect(() => {
-        const coolVideo = document.querySelector("video");
+        const coolVideo = videoRef.current;
         const texts = document.querySelectorAll(".introText");
 
         if (!coolVideo) {
@@ -98,7 +99,12 @@ function IntroVideo() {
     return (
         <div className="introVideo">
             <div className='introVideo-wrap'>
-                <video className="video" playsInline preload="auto" muted>
+                <video 
+                    ref={videoRef} 
+                    className="video" 
+                    playsInline 
+                    preload="auto" 
+                    muted>
                     <source src="../videos/getty_desktop_CH1_1920.mp4" type="video/mp4" />
                 </video>
                 <div className="introText introText-1">Frank Gehrys acclaimed Walt Disney Concert Hall has been called a Living room for Los Angeles.</div>
