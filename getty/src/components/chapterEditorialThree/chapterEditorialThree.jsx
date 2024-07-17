@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./ChapterEditorialThree.scss";
+import "./chapterEditorialThree.scss";
 import wdchInteriorapril11 from "../../../public/images/wdch_interiorapril11.jpg";
 import C from "../../../public/images/c.svg";
 import c4u1766Cropped from "../../../public/images/c4u1766_cropped.jpg";
