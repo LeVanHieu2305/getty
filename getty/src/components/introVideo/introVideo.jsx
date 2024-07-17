@@ -105,7 +105,7 @@ function IntroVideo() {
                     playsInline 
                     preload="auto" 
                     muted>
-                    <source src="../videos/getty_desktop_CH1_1920.mp4" type="video/mp4" />
+                    <source src="../videos/intro-scrub.mp4" type="video/mp4" />
                 </video>
                 <div className="introText introText-1">Frank Gehrys acclaimed Walt Disney Concert Hall has been called a Living room for Los Angeles.</div>
                 <div className="introText introText-2">This remarkable work of public architecture is the result of a decades-long process of collaboration, negotiation, and invention</div>
