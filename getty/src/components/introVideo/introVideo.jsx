@@ -17,6 +17,9 @@ function IntroVideo() {
             return;
         }
 
+        // Ensure video starts loading
+        coolVideo.preload = "auto"; // Ensure the video is set to preload
+
         // Check if the video has finished loading
         coolVideo.onloadeddata = () => {
             console.log("Video onloadeddata event fired");
@@ -42,7 +45,7 @@ function IntroVideo() {
             tl.to(coolVideo, { currentTime: videoDuration, duration: scrollDuration, ease: "none" });
         };
 
-        // Dealing with devices
+        // Handling touch devices
         function isTouchDevice() {
             return (
                 "ontouchstart" in window ||
@@ -55,7 +58,7 @@ function IntroVideo() {
             coolVideo.pause();
         }
 
-        // Timeline to control text
+        // GSAP timeline to control text
         let tlText = gsap.timeline({
             scrollTrigger: {
                 trigger: ".introVideo-wrap",
@@ -98,11 +101,11 @@ function IntroVideo() {
                 <video className="video" playsInline preload="auto" muted>
                     <source src="../videos/getty_desktop_CH1_1920.mp4" type="video/mp4" />
                 </video>
-                <div className="introText introText-1">Frank Gehrys acclained Walt Disney Concert Hall has been called a Living room for Los Angeles.</div>
-                <div className="introText introText-2">This remarkeble work of public architecture is the result of a decades-long process of collaboration, negotiation, and invention</div>
-                <div className="introText introText-3">During this time, Gehry and his collaborators developed hundereds of the limits of technical possibility</div>
+                <div className="introText introText-1">Frank Gehrys acclaimed Walt Disney Concert Hall has been called a Living room for Los Angeles.</div>
+                <div className="introText introText-2">This remarkable work of public architecture is the result of a decades-long process of collaboration, negotiation, and invention</div>
+                <div className="introText introText-3">During this time, Gehry and his collaborators developed hundreds of the limits of technical possibility</div>
                 <div className="introText introText-4">Designed from the inside out, the Hall was conceived with music at its center - a space for music to be heard, seen, and felt</div>
-                <div className="introText introText-5">This is the story of the the Walt Disney Concert Hall, as told through the Frank Gehry archive at</div>
+                <div className="introText introText-5">This is the story of the Walt Disney Concert Hall, as told through the Frank Gehry archive at</div>
             </div>
         </div>
     );
