@@ -10,7 +10,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 // import { useStore } from '@/lib/store'
 // import { useScroll } from '@/hooks/use-scroll'
-// import { Landing } from "@/components/Landing/Landing";
+import { Landing } from "@/components/Landing/Landing";
 import Chapter1 from "@/components/chapter1/Chapter1";
 import Chapter2 from "@/components/chapter2/Chapter2";
 import Chapter3 from "@/components/chapter3/Chapter3";
@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <>
-      {/* <Landing /> */}
+      <Landing />
       <IntroVideo />
       <Chapter1 />
       <InteractiveVideo />

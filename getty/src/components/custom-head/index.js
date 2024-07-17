@@ -1,10 +1,11 @@
-import { NextSeo } from 'next-seo'
-import NextHead from 'next/head'
+import React from 'react';
+import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 export function CustomHead({ title = '', description, image, keywords }) {
   return (
     <>
-      <NextHead>
+      <Head>
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta httpEquiv="x-dns-prefetch-control" content="off" />
         <meta httpEquiv="Window-Target" content="_value" />
@@ -25,7 +26,6 @@ export function CustomHead({ title = '', description, image, keywords }) {
               : 'noindex,nofollow'
           }
         />
-
         <meta
           name="keywords"
           content={keywords && keywords.length ? keywords.join(',') : keywords}
@@ -34,33 +34,15 @@ export function CustomHead({ title = '', description, image, keywords }) {
         <meta name="referrer" content="no-referrer" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="geo.region" content="US" />
-
-        {/* START FAVICON */}
+        {/* Favicon */}
         <link rel="manifest" href="/site.webmanifest" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff98a2" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#ffffff" />
-        <link rel="icon" href="/favicon.ico" />
-        {/* END FAVICON */}
-      </NextHead>
+      </Head>
       <NextSeo
         title={title}
         description={description}
@@ -71,17 +53,12 @@ export function CustomHead({ title = '', description, image, keywords }) {
           locale: 'en_US',
           images: [
             {
-              url: image
-                ? image.url
-                : 'https://lenis.darkroom.engineering/og.png',
+              url: image ? image.url : 'https://lenis.darkroom.engineering/og.png',
               width: image ? image.width : 1200,
               height: image ? image.height : 630,
               alt: title,
             },
           ],
-          defaultImageWidth: 1200,
-          defaultImageHeight: 630,
-          site_name: '',
         }}
         twitter={{
           handle: '@darkroomdevs',
@@ -89,5 +66,5 @@ export function CustomHead({ title = '', description, image, keywords }) {
         }}
       />
     </>
-  )
+  );
 }

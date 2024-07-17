@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './introVideo.scss';
@@ -6,9 +6,23 @@ import './introVideo.scss';
 gsap.registerPlugin(ScrollTrigger);
 
 function IntroVideo() {
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
     useEffect(() => {
         const coolVideo = document.querySelector("video");
         const texts = document.querySelectorAll(".introText");
+
+        if (!coolVideo) {
+            console.error("Video element not found");
+            return;
+        }
+
+        // Check if the video has finished loading
+        coolVideo.onloadeddata = () => {
+            console.log("Video onloadeddata event fired");
+            setIsVideoLoaded(true);
+        };
+
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".introVideo-wrap",
@@ -20,13 +34,13 @@ function IntroVideo() {
             },
             ease: "power2.inOut",
         });
-        // wait until video metadata is loaded, so we can grab the proper duration before adding the onscroll animation. Might need to add a loader for loonng videos
+
         coolVideo.onloadedmetadata = function () {
+            console.log("Video onloadedmetadata event fired");
             const videoDuration = coolVideo.duration;
             const scrollDuration = 1800 * (window.innerHeight / videoDuration);
             tl.to(coolVideo, { currentTime: videoDuration, duration: scrollDuration, ease: "none" });
         };
-
 
         // Dealing with devices
         function isTouchDevice() {
@@ -41,7 +55,7 @@ function IntroVideo() {
             coolVideo.pause();
         }
 
-        // Timeline để điều khiển text
+        // Timeline to control text
         let tlText = gsap.timeline({
             scrollTrigger: {
                 trigger: ".introVideo-wrap",
@@ -51,6 +65,7 @@ function IntroVideo() {
                 // markers: true,
             }
         });
+
         texts.forEach((text, index) => {
             tlText.fromTo(text,
                 { autoAlpha: 0 },
@@ -68,6 +83,14 @@ function IntroVideo() {
         });
 
     }, []);
+
+    useEffect(() => {
+        if (isVideoLoaded) {
+            console.log("Video has finished loading");
+        } else {
+            console.log("Video is still loading");
+        }
+    }, [isVideoLoaded]);
 
     return (
         <div className="introVideo">
