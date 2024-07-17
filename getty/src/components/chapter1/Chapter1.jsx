@@ -76,7 +76,7 @@ function Chapter1() {
       <div className="chapter-one-top">
         <div className="chapter-one-tt">Designing a Space for Music</div>
         <div className="titleScribbles__wrap">
-          <Image src={Top} alt="Image Error" className="one-chapter-image" />
+          {/* <Image src={Top} alt="Image Error" className="one-chapter-image" /> */}
           <Image src={Sides} alt="Image Error" className="one-chapter-image" />
           <Image src={Bottom} alt="Image Error" className="one-chapter-image" />
         </div>
