@@ -6,11 +6,11 @@ import '@/styles/global.scss'
 
 import { CustomHead } from '@/components/custom-head/index'
 
-// import { useStore } from '@/lib/store'
-// import { useEffect, useState } from 'react'
+import { useStore } from '@/lib/store'
+import { useEffect, useState } from 'react'
 
-// import { ReactLenis, useLenis } from 'lenis/react'
-// import Lenis from '@/dist/lenis.mjs'
+import { ReactLenis, useLenis } from 'lenis/react'
+import Lenis from '@/dist/lenis.mjs'
 
 import styles from "./page.module.css";
 import { Header } from "@/components/Header/Header";
@@ -24,6 +24,9 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 export default function RootLayout({ seo = { title: '', description: '', image: '', keywords: '' }, children }) {
+  const lenis = useLenis(({ scroll }) => {
+ 
+  })
   // const [lenis, setLenis] = useStore((state) => [state.lenis, state.setLenis])
 
   // useEffect(() => {
@@ -59,8 +62,9 @@ export default function RootLayout({ seo = { title: '', description: '', image: 
 // requestAnimationFrame(raf)
 
   return (
+    <ReactLenis root>
     <html lang="en">
-      {/* <CustomHead {...seo} /> */}
+      <CustomHead {...seo} />
       <body className={inter.className}>
         <Header />
         <main className='main'>
@@ -69,5 +73,6 @@ export default function RootLayout({ seo = { title: '', description: '', image: 
         <Footer />
       </body>
     </html>
+     </ReactLenis>
   );
 }

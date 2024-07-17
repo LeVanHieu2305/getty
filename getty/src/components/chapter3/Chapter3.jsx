@@ -119,8 +119,8 @@ function Chapter3() {
         </div>
         <div className="three-chapterTitle__titleWrap">
           <div className="chapterTitleSvg">
-            <div class="svgRoot svgMain">
-              <div class="three-item three-text-splitter--splitted-a">
+            <div className="svgRoot svgMain">
+              <div className="three-item three-text-splitter--splitted-a">
                 <svg
                   viewBox="0 0 176.1599884033203 649"
                   width="100%"
@@ -135,7 +135,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-a"
+                className="three-item three-text-splitter--splitted-a"
               >
                 <svg
                   viewBox="0 0 149.1300048828125 407.00006103515625"
@@ -151,7 +151,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-a"
+                className="three-item three-text-splitter--splitted-a"
               >
                 <svg
                   viewBox="0 0 144.13998413085938 309"
@@ -167,7 +167,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-a"
+                className="three-item three-text-splitter--splitted-a"
               >
                 <svg
                   viewBox="0 0 100.53192138671875 247.50006103515625"
@@ -183,7 +183,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-a"
+                className="three-item three-text-splitter--splitted-a"
               >
                 <svg
                   viewBox="0 0 143.1199951171875 309"
@@ -199,7 +199,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-a"
+                className="three-item three-text-splitter--splitted-a"
               >
                 <svg
                   viewBox="0 0 141.1300048828125 407"
@@ -215,7 +215,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-a"
+                className="three-item three-text-splitter--splitted-a"
               >
                 <svg
                   viewBox="0 0 265.239990234375 649"
@@ -231,7 +231,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-b"
+                className="three-item three-text-splitter--splitted-b"
               >
                 <svg
                   viewBox="0 0 60.05000305175781 74.00006103515625"
@@ -247,7 +247,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-b"
+                className="three-item three-text-splitter--splitted-b"
               >
                 <svg
                   viewBox="0 0 129 71.989990234375"
@@ -263,7 +263,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-b"
+                className="three-item three-text-splitter--splitted-b"
               >
                 <svg
                   viewBox="0 0 89.04290771484375 72"
@@ -279,7 +279,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-b"
+                className="three-item three-text-splitter--splitted-b"
               >
                 <svg
                   viewBox="0 0 60.049957275390625 74.00006103515625"
@@ -295,7 +295,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-b"
+                className="three-item three-text-splitter--splitted-b"
               >
                 <svg
                   viewBox="0 0 77.99005126953125 71.989990234375"
@@ -311,7 +311,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-b"
+                className="three-item three-text-splitter--splitted-b"
               >
                 <svg
                   viewBox="0 0 192.6600341796875 72.00006103515625"
@@ -327,7 +327,7 @@ function Chapter3() {
                 </svg>
               </div>
               <div
-                class="three-item three-text-splitter--splitted-b"
+                className="three-item three-text-splitter--splitted-b"
               >
                 <svg
                   viewBox="0 0 68.80999755859375 72"

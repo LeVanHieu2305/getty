@@ -46,7 +46,7 @@ function OutroVideo() {
     return (
         <div className="outroVideo">
             <div className='outroVideo-wrap'>
-                <video className="video" playsInline webkitPlaysInline preload="auto" muted>
+                <video className="video" playsInline webkitplaysinline  preload="auto" muted>
                     <source src="../videos/outro.mp4" type="video/mp4" />
                 </video>
             </div>

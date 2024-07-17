@@ -12,7 +12,7 @@ function Chapter4() {
         start: "top 50%",
         end: "bottom top",
         scrub: true,
-        markers: true,
+        // markers: true,
         onUpdate: (self) => {
           // Tính toán scaleY dựa trên tiến độ cuộn
           const scaleValue = 3.5 - self.progress * 4; // scaleY từ 2.5 xuống 1
