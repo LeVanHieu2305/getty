@@ -6,11 +6,11 @@ import '@/styles/global.scss'
 
 import { CustomHead } from '@/components/custom-head/index'
 
-import { useStore } from '@/lib/store'
-import { useEffect, useState } from 'react'
+// import { useStore } from '@/lib/store'
+// import { useEffect, useState } from 'react'
 
-import { ReactLenis, useLenis } from 'lenis/react'
-import Lenis from '@/dist/lenis.mjs'
+// import { ReactLenis, useLenis } from 'lenis/react'
+// import Lenis from '@/dist/lenis.mjs'
 
 import styles from "./page.module.css";
 import { Header } from "@/components/Header/Header";
@@ -45,22 +45,22 @@ export default function RootLayout({ seo = { title: '', description: '', image: 
   //   }
   // }, [])
 
-  const lenis = new Lenis()
+//   const lenis = new Lenis()
 
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
+// lenis.on('scroll', (e) => {
+//   console.log(e)
+// })
 
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
+// function raf(time) {
+//   lenis.raf(time)
+//   requestAnimationFrame(raf)
+// }
 
-requestAnimationFrame(raf)
+// requestAnimationFrame(raf)
 
   return (
     <html lang="en">
-      <CustomHead {...seo} />
+      {/* <CustomHead {...seo} /> */}
       <body className={inter.className}>
         <Header />
         <main className='main'>
