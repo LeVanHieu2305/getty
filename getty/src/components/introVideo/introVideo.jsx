@@ -72,7 +72,7 @@ function IntroVideo() {
     return (
         <div className="introVideo">
             <div className='introVideo-wrap'>
-                <video className="video" playsInline webkitPlaysInline preload="auto" muted>
+                <video className="video" playsInline preload="auto" muted>
                     <source src="../videos/intro-scrub.mp4" type="video/mp4" />
                 </video>
                 <div className="introText introText-1">Frank Gehrys acclained Walt Disney Concert Hall has been called a Living room for Los Angeles.</div>
