@@ -11,7 +11,6 @@ function IntroVideo() {
 
     useEffect(() => {
         const coolVideo = videoRef.current;
-        const texts = document.querySelectorAll(".introText");
 
         if (!coolVideo) {
             console.error("Video element not found");
@@ -25,87 +24,54 @@ function IntroVideo() {
         coolVideo.onloadeddata = () => {
             console.log("Video onloadeddata event fired");
             setIsVideoLoaded(true);
+            document.body.classList.remove('no-scroll'); // Allow scrolling when video is loaded
         };
 
-        let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".introVideo-wrap",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: true,
-                // markers: true,
-                duration: 10,
-            },
-            ease: "power2.inOut",
-        });
-
-        coolVideo.onloadedmetadata = function () {
+        coolVideo.onloadedmetadata = () => {
             console.log("Video onloadedmetadata event fired");
+
+            // Configure gsap timeline for scroll-triggered playback
             const videoDuration = coolVideo.duration;
-            const scrollDuration = 1800 * (window.innerHeight / videoDuration);
-            tl.to(coolVideo, { currentTime: videoDuration, duration: scrollDuration, ease: "none" });
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".introVideo-wrap",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: true,
+                    onEnter: () => coolVideo.play(),
+                    onLeave: () => coolVideo.pause(),
+                    onEnterBack: () => coolVideo.play(),
+                    onLeaveBack: () => coolVideo.pause(),
+                }
+            }).to(coolVideo, {
+                currentTime: videoDuration,
+                duration: videoDuration,
+                ease: "none"
+            });
         };
 
-        // Handling touch devices
-        function isTouchDevice() {
-            return (
-                "ontouchstart" in window ||
-                navigator.maxTouchPoints > 0 ||
-                navigator.msMaxTouchPoints > 0
-            );
-        }
-        if (isTouchDevice()) {
-            coolVideo.play();
-            coolVideo.pause();
-        }
-
-        // GSAP timeline to control text
-        let tlText = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".introVideo-wrap",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: true,
-                // markers: true,
-            }
-        });
-
-        texts.forEach((text, index) => {
-            tlText.fromTo(text,
-                { autoAlpha: 0 },
-                {
-                    autoAlpha: 1,
-                    duration: 1,
-                    ease: "power2.inOut"
-                }, index * 5)
-                .to(text,
-                    {
-                        autoAlpha: 0,
-                        duration: 1,
-                        ease: "power2.inOut"
-                    }, (index * 5) + 5);
-        });
+        // Disable scrolling until video is loaded
+        document.body.classList.add('no-scroll');
 
     }, []);
 
-    useEffect(() => {
-        if (isVideoLoaded) {
-            console.log("Video has finished loading");
-        } else {
-            console.log("Video is still loading");
-        }
-    }, [isVideoLoaded]);
-
     return (
         <div className="introVideo">
+            {!isVideoLoaded && (
+                <div className="loading-overlay">
+                    Loading...
+                </div>
+            )}
             <div className='introVideo-wrap'>
                 <video 
                     ref={videoRef} 
                     className="video" 
                     playsInline 
                     preload="auto" 
-                    muted>
-                    <source src="../videos/intro-scrub.mp4" type="video/mp4" />
+                    muted 
+                    width="100%" 
+                    height="auto">
+                    <source src="../videos/getty_desktop_CH1_1920.mp4" type="video/mp4" />
                 </video>
                 <div className="introText introText-1">Frank Gehrys acclaimed Walt Disney Concert Hall has been called a Living room for Los Angeles.</div>
                 <div className="introText introText-2">This remarkable work of public architecture is the result of a decades-long process of collaboration, negotiation, and invention</div>
